@@ -12,13 +12,13 @@ function formatTime(num) {
 function updateClock() {
   const now = new Date();
 
-  // Vrijeme
+  
   const hours = formatTime(now.getHours());
   const minutes = formatTime(now.getMinutes());
   const seconds = formatTime(now.getSeconds());
   clock.textContent = `${hours}:${minutes}:${seconds}`;
 
-  // Datum na bosanskom
+  
   const dayName = days[now.getDay()];
   const monthName = months[now.getMonth()];
   const day = now.getDate();
@@ -27,8 +27,9 @@ function updateClock() {
   dateElement.textContent = `${dayName}, ${day}. ${monthName} ${year}`;
 }
 
-// Pokreni odmah
+
 updateClock();
 
-// Ažuriraj svake sekunde
+
 setInterval(updateClock, 1000);
+
